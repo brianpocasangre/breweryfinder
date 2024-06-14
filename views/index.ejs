@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Welcome To Brewery Finder</h1>
+
+<% if (locals.data) { %>
+<div class="card">
+  <img
+    src="/images/pexels-pixabay-159291.jpg"
+    height="300"
+    width="300"
+    alt=""
+  />
+  <h1>Random Brewery Of The Day!</h1>
+  <h2><%= data.name %></h2>
+  <p><%= data.brewery_type %></p>
+  <p><%= data.address_1 %></p>
+  <p><%= data.city %>, <%= data.state_province %></p>
+  <a href="http://thunderhawkbeer.com"><%= data.website_url %></a>
+</div>
+<% } else { %> <% } %>
+
+<h1>Find Your Next Brewery</h1>
+<%- include('partials/footer.ejs') %>
