@@ -19,5 +19,25 @@
 </div>
 <% } else { %> <% } %>
 
-<h1>Find Your Next Brewery</h1>
+<div class="search">
+  <h1>Find Your Next Brewery</h1>
+  <p>
+    Use your preferred way to search the next Brewery you are looking to
+    discover!
+  </p>
+  <form method="get">
+    <label for="city">zip:</label>
+    <input type="number" name="zip" id="brew_zip" />
+    <input type="submit" id="Zip" value="Find" formaction="/get-zip" />
+
+    <label for="city">City:</label>
+    <input type="text" name="city" id="brew_city" />
+    <input type="submit" id="City" value="Find" formaction="/get-city" />
+
+    <label for="city">State:</label>
+    <input type="text" name="state" id="brew_state" />
+    <input type="submit" id="State" value="Find" formaction="/get-state" />
+  </form>
+</div>
+
 <%- include('partials/footer.ejs') %>

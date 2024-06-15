@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs') %>
+<!-- Brewery Results -->
+<% if (locals.brewery) { %>
+<h1>Get Your Drink On!</h1>
+<div class="container">
+  <div class="res-card"></div>
+  <div class="res-card"></div>
+  <div class="res-card"></div>
+</div>
+<% } %><% if (locals.error) { %>
+<div class="error"></div>
+<% } %> <%- include('partials/footer.ejs) %>

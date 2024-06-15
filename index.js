@@ -10,12 +10,13 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', async (req, res) => {
+  const time = new Date();
   try {
     const response = await axios.get(API_URL);
     const result = response.data[0];
-    console.log(result);
     res.render('index.ejs', {
       data: result,
+      date: time.getFullYear,
     });
   } catch (error) {
     console.log(error.data.message);
